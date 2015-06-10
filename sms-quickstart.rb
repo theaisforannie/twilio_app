@@ -4,7 +4,9 @@ require 'sinatra'
 
 get '/sms-quickstart' do
 	twiml = Twilio::TwiML::Response.new do |r|
-		r.Message "Hey Monkey. Thanks for the message!"
+		r.Message do |message|
+			message.Body "Body"
+			message.MediaUrl "http://demo.twilio.com/owl.png"
 	end
 	twiml.text
 end
