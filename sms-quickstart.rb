@@ -7,6 +7,7 @@ get '/sms-quickstart' do
 		r.Message do |message|
 			message.Body "Body"
 			message.MediaUrl "http://demo.twilio.com/owl.png"
+		end
 	end
 	twiml.text
 end
